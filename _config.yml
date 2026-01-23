@@ -14,16 +14,16 @@ timezone: America/Halifax
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Takeru Yamato # the main title
+title: chwurz # the main title
 
-tagline: Halicarnassus # it will display as the subtitle
+tagline: # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  FF14 Raider / Programmer / Blogger
+  FF14 Raider / Programmer / Blogger / Artist
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://chwurz.github.io"
+url: "https://sabercute.ca"
 
 github:
   username: chwurz # change to your GitHub username
@@ -31,11 +31,14 @@ github:
 twitter:
   username: # twitter_username # change to your Twitter username
 
+discord:
+  username: ousunomikoto # change to your Discord username with discriminator
+
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: chwurz
-  email: # example@domain.com # change to your email address
+  email: yamatake@sabercute.ca # example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username # change to your Twitter homepage
@@ -98,7 +101,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: /assets/images/avatar.webp
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
@@ -109,7 +112,7 @@ toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
+  provider: giscus # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -119,8 +122,8 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
+    repo: chwurz/chwurz.github.io
+    repo_id: R_kgDOIWXK3A
     category:
     category_id:
     mapping: # optional, default to 'pathname'
