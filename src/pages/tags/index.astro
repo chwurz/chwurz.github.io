@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const tagCounts = new Map<string, number>();
+for (const post of posts) {
+  for (const tag of post.data.tags) {
+    tagCounts.set(tag, (tagCounts.get(tag) ?? 0) + 1);
+  }
+}
+const tags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
+---
+
+<BaseLayout title="Tags">
+  <h1>All tags</h1>
+  {tags.length === 0 && <p>No tags yet — they appear automatically as you add them to posts.</p>}
+  <ul class="tag-list">
+    {tags.map(([tag, count]) => (
+      <li><a href={`/tags/${tag}/`}>#{tag}</a> <span class="count">({count})</span></li>
+    ))}
+  </ul>
+</BaseLayout>

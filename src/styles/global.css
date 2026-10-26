@@ -1,0 +1,195 @@
+/* Dark theme with an FFXIV-ish gold accent. Tweak freely. */
+
+:root {
+  --bg: #14161c;
+  --bg-raised: #1d2029;
+  --text: #d8dce6;
+  --text-muted: #8b91a3;
+  --accent: #d4af5f; /* Woad-painted gold */
+  --accent-dim: #8a7440;
+  --border: #2b3040;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-raised);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.site-title {
+  font-size: 1.35rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+}
+
+nav a {
+  margin-left: 1.1rem;
+  color: var(--text-muted);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  padding: 2.5rem 0 1rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.4rem;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.hero p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Post cards */
+.post-card {
+  border-bottom: 1px solid var(--border);
+  padding: 1.4rem 0;
+}
+
+.post-card h2 {
+  margin: 0 0 0.2rem;
+  font-size: 1.25rem;
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.tags {
+  margin: 0.5rem 0 0;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--accent-dim);
+}
+
+.tag:hover {
+  color: var(--accent);
+}
+
+/* Single post */
+.post header {
+  padding: 2rem 0 0.5rem;
+}
+
+.post h1 {
+  margin: 0 0 0.3rem;
+  font-size: 1.9rem;
+  color: var(--accent);
+}
+
+.prose img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--accent-dim);
+  margin: 1rem 0;
+  padding: 0.2rem 1rem;
+  color: var(--text-muted);
+}
+
+.prose code {
+  background: var(--bg-raised);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.prose pre {
+  background: var(--bg-raised);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.prose pre code {
+  padding: 0;
+  background: none;
+}
+
+.back {
+  margin-top: 2.5rem;
+}
+
+/* Tag pages */
+.tag-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list li {
+  padding: 0.35rem 0;
+}
+
+.count {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding: 1.5rem 0 2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.site-footer p {
+  margin: 0;
+}

@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE_AUTHOR } from '../consts';
+---
+
+<BaseLayout title="About">
+  <h1>About</h1>
+  <div class="prose">
+    <p>Hi, I'm {SITE_AUTHOR}.</p>
+    <p>
+      This blog is where I write about raiding in Final Fantasy XIV —
+      progression nights, strat debates that go on too long in Discord,
+      the pull that finally worked, and the 87 that didn't.
+    </p>
+    <p>Edit this page in <code>src/pages/about.astro</code> to tell your own story.</p>
+  </div>
+</BaseLayout>
